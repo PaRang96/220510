@@ -13,10 +13,23 @@ int ArrayAdd(int* list, int b)
 	return result;
 }
 
-//void ArraySort(int list[], int n)
-//{
-//	for (int i = 0; i < i++)
-//}
+void ArraySort(int list[], int n)
+{
+	int temp;
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < i; j++)
+		{
+			if (list[i] < list[j])
+			{
+				temp = list[j];
+				list[j] = list[i];
+				list[i] = temp;
+			}
+		}
+	}
+	
+}
 
 int main()
 {
@@ -31,14 +44,14 @@ int main()
 		cin >> arr[i];
 	}
 
-	cout << ArrayAdd(arr,n);
+	cout << ArrayAdd(arr, n);
 
-	//ArraySort(arr, n);
+	ArraySort(arr, n);
 
-	/*for (int i = 0; i < n; i++)
+	for (int i = 0; i < n; i++)
 	{
 		cout << arr[i] << endl;
-	}*/
+	}
 
 	delete[] arr;
 	return 0;
