@@ -1,6 +1,41 @@
 #include <iostream>
 using namespace std;
 
+int ArrayAdd(int* list, int b);
+void ArraySort(int list[], int n);
+
+int main()
+{
+	int n = 0;
+	cin >> n;
+
+	int* arr = new int[n];
+
+
+	for (int i = 0; i < n; i++)
+	{
+		cin >> arr[i];
+	}
+
+	cout << ArrayAdd(arr, n) << '\n' << endl;
+
+	ArraySort(arr, n);
+
+	for (int i = 0; i < n; i++)
+	{
+		cout << arr[i] << endl;
+	}
+
+	delete[] arr;
+
+	/*double* Data = nullptr;
+	Data = new double;
+	delete Data;
+	Data = nullptr;*/
+
+	return 0;
+}
+
 int ArrayAdd(int* list, int b)
 {
 	int result = 0;
@@ -28,30 +63,4 @@ void ArraySort(int list[], int n)
 			}
 		}
 	}
-}
-
-int main()
-{
-	int n = 0;
-	cin >> n;
-
-	int* arr = new int[n];
-
-
-	for (int i = 0; i < n; i++)
-	{
-		cin >> arr[i];
-	}
-
-	cout << ArrayAdd(arr, n);
-
-	ArraySort(arr, n);
-
-	for (int i = 0; i < n; i++)
-	{
-		cout << arr[i] << endl;
-	}
-
-	delete[] arr;
-	return 0;
 }
