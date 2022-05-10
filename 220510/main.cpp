@@ -28,7 +28,6 @@ void ArraySort(int list[], int n)
 			}
 		}
 	}
-	
 }
 
 int main()
